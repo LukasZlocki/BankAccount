@@ -9,7 +9,7 @@ class BankAccount:
     # the account's balance. It is assigned to
     # the __balance attribute.
 
-    # ! ToDo : !  dodac jako parametr date twprzenia konta (cos jak DateTime.now)
+    # ! ToDo : !  dodac jako parametr date tworzenia konta (cos jak DateTime.now)
     def __init__(self, bal, na, acctnb):
         self.__balance = bal
         self.__name = na
@@ -22,17 +22,14 @@ class BankAccount:
         self.__balance += amount
 
     # The withdraw method withdraws an amount
-    # from the account.
+    # from the account ! without any limits !
     def withdraw(self, amount):
-        if amount > 1000 :
-            print("Za duza kwota pobrania. Pobierz max 1000")
-        else :
-            if self.__balance >= amount:
-                print("Amount to withdraw : ", amount)
-                self.__balance -= amount
-                print("... Amount withdrawn.")
-            else:
-                print('Error: Insufficient funds')
+        if self.__balance >= amount:
+            print("Amount to withdraw : ", amount)
+            self.__balance -= amount
+            print("... Amount withdrawn.")
+        else:
+            print('Error: Insufficient funds')
 
 
     # The close method is closing account by
