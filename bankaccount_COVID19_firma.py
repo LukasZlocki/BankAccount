@@ -22,10 +22,6 @@ class BankAccount_COVID19_firma(bankaccount.BankAccount):
 
     # -- Overrided methods --
 
-    # Get account type
-    def get_acctype(self):
-        return self.__acctype
-    
     # The withdraw method withdraws an amount
     # from the account.
     def withdraw(self, amount):
