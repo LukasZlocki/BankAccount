@@ -1,8 +1,6 @@
 # Banking task by Lukasz Zlocki / 76103
 # zlocki_76103@cloud.wsb.wroclaw.pl
 
-# ToDo : refactor to dziedziczenie na bazie zadania covid itp.
-
 import bankaccount
 import bankaccount_COVID19
 import bankaccount_COVID19_firma 
@@ -62,6 +60,9 @@ def saveData(FILENAME, accounts_list):
     # Close file
     db_file.close()
     print("... Accounts list updated to file.")
+    print("...")
+    print("..")
+    print(".")
 
 # Create new account function
 def createAccount(FILENAME, accounts_list):
@@ -104,25 +105,24 @@ def loadAccounts(FILENAME, accounts_list):
     except:
         print("No file found. Create account first.")
 # Delete account function with withdraw all money
-def deleteAccount(FILENAME, account_list):
+def deleteAccount(FILENAME, accounts_list):
     print("-- Delete account --")
     _account_found = False
+    _account_deleted = 0
     account_number = int(input("Account number to delete : ")) 
     id = 0
-    for account in account_list: 
+    for account in accounts_list: 
         if account.get_accountNb() == account_number:
-            # ToDo : code to withdraw all money here.
-            account_balance = account.get_balance()
-            account.withdraw(account_balance)
-            account_list.pop(id)   
-            print("... Account nb " + str(account_number) + " deleted.")
+            account.close(accounts_list, id)
+           
             _account_found = True
             # Saving updated data
-            saveData(FILENAME, account_list)        
+            saveData(FILENAME, accounts_list)        
         else:
             id = id +1
     if _account_found == False:
         print("No account number " + str(account_number) + " found.")               
+    
 
 # Deposity money to account 
 def deposit(FILENAME, account_list):

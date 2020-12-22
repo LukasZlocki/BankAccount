@@ -1,9 +1,9 @@
 # Banking task by Lukasz Zlocki / 76103
 # zlocki_76103@cloud.wsb.wroclaw.pl
 
-# ToDo : bezzwrotna pozycza 5k pln przy zalozeniu konta / done Check it 
-# ToDo : Brak mozliwosci skasowania konta (Overide : close) / done Check it 
-# ToDo : brak mozliwosci wyplaty wiecej niz 1 k pln (override : withdraw) / done Check it 
+# ToDo : bezzwrotna pozycza 5k pln przy zalozeniu konta / done & checked 
+# ToDo : Brak mozliwosci skasowania konta (Overide : close) / done & checked
+# ToDo : brak mozliwosci wyplaty wiecej niz 1 k pln (override : withdraw) / done & checked
 
 import bankaccount
 
@@ -39,8 +39,8 @@ class BankAccount_COVID19_firma(bankaccount.BankAccount):
             else:
                 print('Error: Insufficient funds')
 
-    # The close method is closing account by
-    # -> withdraw all money
-    # -> deleting this object (BankAccount)
-    def close(self, account_number):
-        print('Deleting company account not allowed')    
+    # The close method is closing account 
+    # (Overrided) -> this method is not closing account 
+    def close(self, accounts_list, id):
+        print('Deleting company account not allowed')
+       

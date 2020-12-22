@@ -34,19 +34,27 @@ class BankAccount:
             else:
                 print('Error: Insufficient funds')
 
+
     # The close method is closing account by
     # -> withdraw all money
-    # -> deleting this object (BankAccount)
-    def close(self, account_number):
+    # -> deleting this object in accounts list
+    def close(self, accounts_list, id):
+        # Withdraw all money here.
         zero_balance = self.__balance
         self.withdraw(zero_balance)
-        del self
 
+        # Removing account from account list
+        accounts_list.pop(id)
+        print("... Account nb " + str(self.__acct_nb) + " deleted.")   
+        
+
+           
     # The print_all method returns all class fields
     def print__all(self):
         print("Account number : ", self.__acct_nb)
         print("Owner name : ", self.__name)
         print("Account balance : ", self.__balance)
+
 
     # GETTERS
 
