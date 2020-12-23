@@ -69,5 +69,9 @@ class BankAccount:
         return self.__acctype
     
 
+    # SETTERS
 
+    # set balance
+    def set_balance(self, bal):
+        self.__balance = bal
 
