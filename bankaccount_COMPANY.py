@@ -7,7 +7,7 @@
 
 import bankaccount
 
-class BankAccount_COVID19_firma(bankaccount.BankAccount):
+class BankAccount_COMPANY(bankaccount.BankAccount):
     # init superclass bankaccount
     def __init__(self, bal, na, acctnb, initdate):
         # 5k grand for company from government

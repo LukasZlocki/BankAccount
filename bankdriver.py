@@ -3,7 +3,7 @@
 
 import bankaccount
 import bankaccount_COVID19
-import bankaccount_COVID19_firma 
+import bankaccount_COMPANY
 import bankaccount_INT
 import pickle
 from datetime import date

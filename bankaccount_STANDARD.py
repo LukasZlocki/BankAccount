@@ -5,7 +5,7 @@
 
 import bankaccount
 
-class BankAccount_COVID19(bankaccount.BankAccount):
+class BankAccount_STANDARD(bankaccount.BankAccount):
      # init superclass bankaccount
     def __init__(self, bal, na, acctnb, initdate):
         # init superclass
