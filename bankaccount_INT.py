@@ -23,14 +23,4 @@ class BankAccount_INT(bankaccount.BankAccount):
     def get_acctype(self):
         return self.__acctype
 
-    # (Overrided) The withdraw method withdraws an amount
-    # from the account ! without any limits !
-    def withdraw(self, amount):
-        if self.get_balance() >= amount:
-            print("Amount to withdraw : ", amount)
-            _new_balance = self.get_balance()-amount
-            self.set_balance(_new_balance)
-            print("... Amount withdrawn.")
-        else:
-            print('Error: Insufficient funds')
  
