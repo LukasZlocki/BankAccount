@@ -2,7 +2,7 @@
 # zlocki_76103@cloud.wsb.wroclaw.pl
 
 import bankaccount
-import bankaccount_COVID19
+import bankaccount_STANDARD
 import bankaccount_COMPANY
 import bankaccount_INT
 import pickle
@@ -15,10 +15,11 @@ def testCreating(FILENAME, accounts_list):
     accountNb = int(input('Account number : '))
     ownerName = input('Owner name : ')
     accountBalance = float(input('Account balance : '))
-    initdate = date.today()
+    # initdate = date.today()
+    initdate = date(2018, 4, 3)
 
     # Create an object
-    newAccount = bankaccount_INT.BankAccount_INT(accountBalance, ownerName, accountNb, initdate)
+    newAccount = bankaccount_COMPANY.BankAccount_COMPANY(accountBalance, ownerName, accountNb, initdate)
             
     # Add object to list of accounts
     accounts_list.append(newAccount)
