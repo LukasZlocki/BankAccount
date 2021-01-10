@@ -9,7 +9,7 @@ import pickle
 from datetime import date
 
 def testCreating(FILENAME, accounts_list):
-    print("-- Creating TEST account INTERNATIONAL --")    
+    print("-- Creating TEST account STANDARD --")    
         
     # Get data from user
     accountNb = int(input('Account number : '))
@@ -19,7 +19,7 @@ def testCreating(FILENAME, accounts_list):
     initdate = date(2018, 4, 3)
 
     # Create an object
-    newAccount = bankaccount_COMPANY.BankAccount_COMPANY(accountBalance, ownerName, accountNb, initdate)
+    newAccount = bankaccount_STANDARD.BankAccount_STANDARD(accountBalance, ownerName, accountNb, initdate)
             
     # Add object to list of accounts
     accounts_list.append(newAccount)

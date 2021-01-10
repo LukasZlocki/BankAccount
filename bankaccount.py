@@ -14,7 +14,7 @@ class BankAccount:
         self.__balance = bal
         self.__name = na
         self.__acct_nb = acctnb
-        self.__acctype = "regular bank account"
+        self.__acctype = "Regular bank account"
 
     # The deposit method makes a deposit into the
     # account.
