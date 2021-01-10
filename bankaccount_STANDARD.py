@@ -14,7 +14,7 @@ class BankAccount_STANDARD(bankaccount.BankAccount):
 
         # init date attribute
         self.__initdate = initdate
-        self.__acctype = "Covid19 Standard bank account"
+        self.__acctype = "Standard bank account"
 
 
     # -- Overrided methods --

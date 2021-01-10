@@ -22,7 +22,7 @@ class BankAccount_COMPANY(bankaccount.BankAccount):
    
         # init date attribute
         self.__initdate = initdate
-        self.__acctype = "Covid19 firma bank account"
+        self.__acctype = "Company bank account"
 
 
 
