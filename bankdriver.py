@@ -68,15 +68,29 @@ def saveData(FILENAME, accounts_list):
 # Create new account function
 def createAccount(FILENAME, accounts_list):
     print("-- Creating account --")    
-        
+    print("Implement an account type :")
+    print("[C] - Company account.")
+    print("[I] - International account.")
+    print("[S] - Standard account.")
+    
+    _user_account = input('account type -> ')
+
     # Get data from user
     accountNb = int(input('Account number : '))
     ownerName = input('Owner name : ')
     accountBalance = float(input('Account balance : '))
+    accountInitdate = date.today()
 
-    # Create an object
-    newAccount = bankaccount.BankAccount(accountBalance, ownerName, accountNb)
-            
+    if _user_account == 'C':
+        # Create an COMPANY account object
+        newAccount = bankaccount_COMPANY.BankAccount_COMPANY(accountBalance, ownerName, accountNb,accountInitdate) 
+    if _user_account == 'I':
+        # Create an INTERNATIONAL account object
+        newAccount = bankaccount_INT.BankAccount_INT(accountBalance, ownerName, accountNb,accountInitdate) 
+    if _user_account == 'S':
+        # Create an STANDARD account object
+        newAccount = bankaccount_STANDARD.BankAccount_STANDARD(accountBalance, ownerName, accountNb,accountInitdate) 
+          
     # Add object to list of accounts
     accounts_list.append(newAccount)
     print("... Account added to list.")
@@ -105,6 +119,7 @@ def loadAccounts(FILENAME, accounts_list):
         print("... Accounts loaded to list.")
     except:
         print("No file found. Create account first.")
+
 # Delete account function with withdraw all money
 def deleteAccount(FILENAME, accounts_list):
     print("-- Delete account --")
@@ -124,7 +139,6 @@ def deleteAccount(FILENAME, accounts_list):
     if _account_found == False:
         print("No account number " + str(account_number) + " found.")               
     
-
 # Deposity money to account 
 def deposit(FILENAME, account_list):
     print("-- Deposit to account --") 
