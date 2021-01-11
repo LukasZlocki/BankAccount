@@ -23,15 +23,15 @@ class BankAccount_STANDARD(bankaccount.BankAccount):
     def get_acctype(self):
         return self.__acctype
     
-     # The withdraw method withdraws an amount from the account.
+    # The withdraw method withdraws an amount from the account.
     # (Overrided) Covid19 rule : withdraw not more than 1 k pln
     def withdraw(self, amount):
         if amount > 1000 :
             print("Too large amount of money. Withdraw max 1000 pln")
         else :
-            if self.__balance >= amount:
-                print("Amount to withdraw : ", amount)
-                self.__balance -= amount
+            if self.get_balance() >= amount:
+                new_balans = self.get_balance() - amount
+                self.set_balance(new_balans)
                 print("... Amount withdrawn.")
             else:
                 print('Error: Insufficient funds')

@@ -139,7 +139,7 @@ def deposit(FILENAME, account_list):
 def withdraw(FILENAME, account_list):
     print("-- Withdraw from account --")
     _account_found = False
-    account_number = int(input("Account number to wihdraw : ")) 
+    account_number = int(input("Account number to withdraw : ")) 
     for account in account_list: 
         if account.get_accountNb() == account_number:
             balance = account.get_balance()

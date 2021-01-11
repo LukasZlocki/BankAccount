@@ -39,7 +39,6 @@ class BankAccount_COMPANY(bankaccount.BankAccount):
             print("Too large amount of money. Withdraw max 1000 pln")
         else :
             if self.get_balance() >= amount:
-                print("Amount to withdraw : ", amount)
                 new_balans = self.get_balance() - amount
                 self.set_balance(new_balans)
                 print("... Amount withdrawn.")

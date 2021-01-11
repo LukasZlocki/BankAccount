@@ -25,7 +25,6 @@ class BankAccount:
     # from the account ! without any limits !
     def withdraw(self, amount):
         if self.__balance >= amount:
-            print("Amount to withdraw : ", amount)
             self.__balance -= amount
             print("... Amount withdrawn.")
         else:
