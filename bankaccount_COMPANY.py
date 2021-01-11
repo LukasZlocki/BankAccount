@@ -40,7 +40,6 @@ class BankAccount_COMPANY(bankaccount.BankAccount):
         else :
             if self.get_balance() >= amount:
                 print("Amount to withdraw : ", amount)
-                # TU JEST BLAD !!!
                 new_balans = self.get_balance() - amount
                 self.set_balance(new_balans)
                 print("... Amount withdrawn.")

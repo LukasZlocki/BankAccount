@@ -8,26 +8,6 @@ import bankaccount_INT
 import pickle
 from datetime import date
 
-def testCreating(FILENAME, accounts_list):
-    print("-- Creating TEST account STANDARD --")    
-        
-    # Get data from user
-    accountNb = int(input('Account number : '))
-    ownerName = input('Owner name : ')
-    accountBalance = float(input('Account balance : '))
-    # initdate = date.today()
-    initdate = date(2018, 4, 3)
-
-    # Create an object
-    newAccount = bankaccount_STANDARD.BankAccount_STANDARD(accountBalance, ownerName, accountNb, initdate)
-            
-    # Add object to list of accounts
-    accounts_list.append(newAccount)
-    print("... Account added to list.")
-
-    # Save accounts list to file
-    saveData(FILENAME, accounts_list)
-
 
 # Show all accounts
 def showAllAccounts(accounts_list):
@@ -191,8 +171,6 @@ def main():
         print("[WDR] - Withdraw money from account.")
         print("[L] - List of all accounts.")
         print("[R] - Read data from file.")
-        print("[W] - Write data to file.")
-        print("[TEST] - Create : Test Covid19 firma")
         print("[E] - Exit.")
         user_selektor = input('Your command -> ')
 
@@ -221,14 +199,6 @@ def main():
         if user_selektor == 'R':
             loadAccounts(FILENAME, accounts_list)
             
-        # [W] - Write data to file.
-        if user_selektor == 'W':
-            saveData(FILENAME, accounts_list)
-
-        # [TEST] - Create : Test Covid19 firma
-        if user_selektor == 'TEST':
-            testCreating(FILENAME, accounts_list)  
-
         # [E] - Exit.
         if user_selektor == 'E':
             exit_looper = True
