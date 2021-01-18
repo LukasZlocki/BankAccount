@@ -1,6 +1,7 @@
 # Banking task by Lukasz Zlocki / 76103
 # zlocki_76103@cloud.wsb.wroclaw.pl
 
+
 import bankaccount
 import bankaccount_STANDARD
 import bankaccount_COMPANY

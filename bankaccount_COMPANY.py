@@ -1,10 +1,6 @@
 # Banking task by Lukasz Zlocki / 76103
 # zlocki_76103@cloud.wsb.wroclaw.pl
 
-# ToDo : bezzwrotna pozycza 5k pln przy zalozeniu konta / done & checked with date
-# ToDo : Brak mozliwosci skasowania konta (Overide : close) / done & checked
-# ToDo : brak mozliwosci wyplaty wiecej niz 1 k pln (override : withdraw) / done & checked
-
 import bankaccount
 from datetime import date
 

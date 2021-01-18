@@ -1,8 +1,6 @@
 # Banking task by Lukasz Zlocki / 76103
 # zlocki_76103@cloud.wsb.wroclaw.pl
 
-# ToDo : Do kazdej klasy dodac typ konta(string)(przez override)
-# ToDo : Limit wyplaty 1k pln tylko w okresie covid 01.04.2019
 
 import bankaccount
 
