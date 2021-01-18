@@ -82,6 +82,8 @@ def createAccount(FILENAME, accounts_list):
 # Laad accounts from file
 def loadAccounts(FILENAME, accounts_list):
     print("-- Loading accounts from data base --") 
+    # Clearing all data in list
+    accounts_list.clear()
     eof = False #End of file indicator
     try:
         # Open the binary file
